@@ -13,16 +13,19 @@ public class Solution {
 		int x2 = in.nextInt();
 		int v2 = in.nextInt();
 
-		while (x2>=x1){
-			if (x1==x2) {
-				System.out.println("YES");
-				return;
+		if (v2<v1) {
+			while (x2>=x1){
+				if (x1==x2) {
+					System.out.println("YES");
+					return;
+				}
+				x1+=v1;
+				x2+=v2;
 			}
-			x1+=v1;
-			x2+=v2;
+		} else {
+			System.out.println("NO");
+			return;
 		}
-
 		System.out.println("NO");
-
 	}
 }
